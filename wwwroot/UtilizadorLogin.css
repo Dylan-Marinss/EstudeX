@@ -1,0 +1,162 @@
+/* ====== CONTAINER GERAL ====== */
+.login-container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #3a0066, #7f00ff, #b266ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ====== PAINEL PRINCIPAL ====== */
+.login-panel {
+    width: 900px;
+    height: 500px;
+    background: rgba(80, 0, 120, 0.25);
+    border-radius: 25px;
+    border: 3px solid white;
+    box-shadow: 0 0 25px white;
+    display: flex;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+/* ====== LADO ESQUERDO / DIREITO ====== */
+.left-side,
+.right-side {
+    flex: 1;
+    padding: 40px;
+    color: white;
+}
+
+.left-side {
+    border-right: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ====== TÍTULOS ====== */
+.title {
+    font-size: 38px;
+    margin-bottom: 35px;
+    font-weight: bold;
+    text-shadow: 0 0 15px white;
+}
+
+.subtitle {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 12px white;
+}
+
+/* ====== INPUTS ====== */
+.input-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Suporte para InputText e <input> nativos */
+.input-control,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-control:focus,
+input:focus {
+    border-color: #e6cfff;
+    box-shadow: 0 0 12px white;
+}
+
+.input-control::placeholder,
+input::placeholder {
+    color: #e6cfff;
+}
+
+/* ====== LINK ESQUECEU SENHA ====== */
+.forgot-password {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #ebc8ff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.forgot-password:hover {
+    color: white;
+    text-shadow: 0 0 8px white;
+}
+
+/* ====== BOTÃO LOGIN ====== */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    background: #b266ff;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-login:hover {
+    background: #d9b3ff;
+    box-shadow: 0 0 15px white;
+}
+
+/* ====== LADO DIREITO / TEXTO CADASTRO ====== */
+.signup-text {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.signup-text a {
+    color: #ffccff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.signup-text a:hover {
+    color: white;
+    text-shadow: 0 0 12px white;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 850px) {
+    .login-panel {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .left-side {
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .right-side {
+        text-align: center;
+    }
+}

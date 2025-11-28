@@ -1,0 +1,46 @@
+@page "/usuarios/login"
+@rendermode InteractiveServer
+@inject FrontendTCC.Services.UtilizadorService UtilizadorService
+@using FrontendTCC.Models
+<link href="css/UtilizadorLogin.css" rel="stylesheet" />
+<div class="login-container">
+    <div class="login-panel">
+
+        <!-- LADO ESQUERDO -->
+        <div class="left-side">
+            <h1 class="title">LOGIN</h1>
+
+            <EditForm Model="@loginModel" OnValidSubmit="@FazerLogin">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <InputText @bind-Value="loginModel.Email" placeholder="Digite seu e-mail" class="input-control" />
+                </div>
+
+                <div class="input-group">
+                    <label>Senha</label>
+                    <InputText @bind-Value="loginModel.Senha" type="password" placeholder="Digite sua senha" class="input-control" />
+                </div>
+
+                <a class="forgot-password" href="/recuperar-senha">Esqueceu sua senha?</a>
+
+                <button type="submit" class="btn-login">Entrar</button>
+            </EditForm>
+        </div>
+
+        <!-- LADO DIREITO -->
+        <div class="right-side">
+            <h2 class="subtitle">AINDA NÃO TEM UMA CONTA?</h2>
+            <p class="signup-text">
+                Crie sua conta <a href="/cadastro">clicando aqui</a>.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+@code{
+    //codigo aqui pae
+}
